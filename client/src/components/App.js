@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path="/articles/:id">
+        <Route exact path="http:/localhost:3000/articles/:id">
           <Article />
         </Route>
         <Route exact path="/">

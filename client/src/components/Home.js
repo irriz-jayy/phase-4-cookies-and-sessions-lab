@@ -6,7 +6,7 @@ function Home() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("/articles")
+    fetch("http://localhost:3000/articles")
       .then((r) => r.json())
       .then(setArticles);
   }, []);
@@ -18,7 +18,9 @@ function Home() {
         return (
           <article key={article.id}>
             <h3>
-              <Link to={`/articles/${article.id}`}>{article.title}</Link>
+              <Link to={`http://localhost:3000/articles/${article.id}`}>
+                {article.title}
+              </Link>
             </h3>
             <small>
               {article.date} • {emojis} {article.minutes_to_read} min read
